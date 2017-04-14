@@ -8,12 +8,6 @@ namespace _2010107281
 {
     public class VentaPaquete //central
     {        
-        List<Paquete> _Paquete;
-        List<MedioPago> _MedioPago;
-        List<ComprobantePago> _ComprobantePago;
-        List<ServicioTuristico> _ServicioTuristico;
-        List<Cliente> _Cliente;
-        List<Empleado> _Empleado;
         private Persona persona= new Persona();
         private MedioPago medioPag = new MedioPago();
         private ComprobantePago compPag = new ComprobantePago();
@@ -25,19 +19,7 @@ namespace _2010107281
         private ServicioHospedaje SerHospe = new ServicioHospedaje();
         private TipoTransporte tipTrans = new TipoTransporte();
         private CategoriaTransporte catTrans = new CategoriaTransporte();
-
-
-        public VentaPaquete()
-        {
-            _Paquete = new List<Paquete>();
-            _MedioPago = new List<MedioPago>();
-            _ComprobantePago = new List<ComprobantePago>();
-            _ServicioTuristico = new List<ServicioTuristico>();
-            _Cliente = new List<Cliente>();
-            _Empleado = new List<Empleado>();
-        }
-
-       
+                       
         public void AgregarNombre(int numero)
         {        
 
@@ -121,25 +103,7 @@ namespace _2010107281
             string categoriaTrans = catTrans.seleccionCategoriaTransporte(numero);
             Console.WriteLine("Servicio del Hospedaje: " + categoriaTrans);
 
-        }
-       
-
-        // public void RegistrarVenta(string numero)
-        // {
-        // ComprobantePago _comPag = new ComprobantePago(numero);
-        // MedioPago _medPag = new MedioPago(numero);
-        //ServicioTuristico _serTur = new ServicioTuristico(numero);
-        //Console.WriteLine("Tipo de Pago: ", _comPag);
-        // Console.WriteLine("Medio de Pago: ", _medPag);
-        // Console.WriteLine("Tipo de Hospedaje: ", _medPag);
-        // Console.WriteLine("Clasificación de Hospedaje: ", _medPag);
-        // Console.WriteLine("Categoria de Hospedaje: ", _medPag);
-        //Console.WriteLine("Servicio de Hospedaje: ", _medPag);
-
-        //Llamada _llamada = new Llamada(_fonoDestino);
-
-        //}
-
+        }               
 
     }
 }

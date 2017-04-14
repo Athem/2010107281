@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _2010107281
 {
-    public class ServicioTuristico //cambiar a abstract
+    abstract class ServicioTuristico // abstract
     {
         string _numero;
 
