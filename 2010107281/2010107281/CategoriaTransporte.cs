@@ -10,11 +10,11 @@ namespace _2010107281
     {
         public string seleccionCategoriaTransporte(int ale)
         {
-            if (ale == 1)
+            if (ale.Equals(1))
             {
                 return "Basico";
             }
-            else if (ale == 2)
+            else if (ale.Equals(2))
             {
                 return "VIP";
             }

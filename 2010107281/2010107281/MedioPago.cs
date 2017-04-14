@@ -8,12 +8,12 @@ namespace _2010107281
 {
     public class MedioPago
     {
-        string _numero;
+       // string _numero;
 
-        public MedioPago(string numero)
-        {
-            _numero = numero;
-        }
+       // public MedioPago(string numero)
+       // {
+        //    _numero = numero;
+        //}
         public string seleccionMedioPago(int ale)
         {
             if (ale == 1)

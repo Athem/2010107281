@@ -9,29 +9,29 @@ namespace _2010107281
     public class ClasificacionHospedaje
     {
      
-        public string seleccionClasificacionHospedaje(int aleClasi) //1 - 5 estrellas  ✰
+        public string seleccionClasificacionHospedaje(int ale) //1 - 5 estrellas  ✰
         {
-            switch (aleClasi)
+            if (ale.Equals(1))
             {
-                case 1:
-                    return "✰";
-                    break;
-
-                case 2:
-                    return "✰✰";
-                    break;
-
-                case 3:
-                    return "✰✰✰";
-                    break;
-                case 4:
-                    return "✰✰✰✰";
-                    break;
-
-                default:
-                    return "✰✰✰✰✰";
-                    break;
+                return "1 Estrella ";//✰
             }
+            else if (ale.Equals(2))
+            {
+                return "2 Estrella ";//✰✰
+            }
+            else if(ale.Equals(3))
+            {
+                return "3 Estrella ";//✰✰✰
+            }
+            else if(ale.Equals(4))
+            {
+                return "4 Estrella ";//✰✰✰✰
+            }
+            else
+            {
+                return "5 Estrella ";//✰✰✰✰✰
+            }
+                        
         }
     }
 }

@@ -10,11 +10,11 @@ namespace _2010107281
     {
         public string seleccionServicioHospedaje(int ale)
         {
-            if (ale == 1)
+            if (ale.Equals(1))
             {
                 return "Lavanderia";
             }
-            else if (ale == 2)
+            else if (ale.Equals(2))
             {
                 return "Planchado";
             }

@@ -10,12 +10,7 @@ namespace _2010107281
     {       
         private TipoComprobante _tipoComprobante;
 
-        string _numero;
-
-        public ComprobantePago(string numero)
-        {
-            _numero = numero;
-        }
+        
 
         public TipoComprobante TipCom { get { return _tipoComprobante; } }
     }

@@ -8,26 +8,24 @@ namespace _2010107281
 {
     public class TipoHospedaje
     {
-      public string seleccionTipoHospedaje(int aleTipo) //hotel hostal backpacker
+      public string seleccionTipoHospedaje(int ale) //hotel hostal backpacker
         {
-            switch (aleTipo)
+            if (ale == 1)
             {
-                case 1 :
-                    return "Hostal";
-                    break;
-
-                case 2 :
-                    return "Hotel";
-                    break;
-
-                case 3:
-                    return "Departamento";
-                    break;
-
-                default:
-                    return "backpacker";
-                    break;
+                return "Hostal";
             }
+            else if (ale == 2)
+            {
+                return "Departamento";
+            }
+            else if(ale == 3)
+            {
+                return "backpacker";
+            }else
+            {
+                return "Hotel";
+            }
+            
         }
     }
 }

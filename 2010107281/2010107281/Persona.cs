@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace _2010107281
 {
     public class Persona
-    {
+    {        
         public string seleccionNombre(int ale)
         {
             

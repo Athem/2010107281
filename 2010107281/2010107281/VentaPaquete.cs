@@ -14,7 +14,19 @@ namespace _2010107281
         List<ServicioTuristico> _ServicioTuristico;
         List<Cliente> _Cliente;
         List<Empleado> _Empleado;
-        private Persona _Persona;
+        private Persona persona= new Persona();
+        private MedioPago medioPag = new MedioPago();
+        private ComprobantePago compPag = new ComprobantePago();
+        private TipoComprobante tipo = new TipoComprobante();
+        private CategoriaAlimentacion catAlimento = new CategoriaAlimentacion();
+        private TipoHospedaje tipHos = new TipoHospedaje();
+        private ClasificacionHospedaje claHos = new ClasificacionHospedaje();
+        private CategoriaHospedaje catHospe = new CategoriaHospedaje();
+        private ServicioHospedaje SerHospe = new ServicioHospedaje();
+        private TipoTransporte tipTrans = new TipoTransporte();
+        private CategoriaTransporte catTrans = new CategoriaTransporte();
+
+
         public VentaPaquete()
         {
             _Paquete = new List<Paquete>();
@@ -23,52 +35,111 @@ namespace _2010107281
             _ServicioTuristico = new List<ServicioTuristico>();
             _Cliente = new List<Cliente>();
             _Empleado = new List<Empleado>();
-        } 
-        public void AgregarNombre(String numero)
+        }
+
+       
+        public void AgregarNombre(int numero)
+        {        
+
+            string nomCli = persona.seleccionNombre(numero);
+            Console.WriteLine("Nombre del Cliente: "+ nomCli);
+        }
+
+        public void AgregarEmpleado(int numero)
+        {           
+
+            string nomEmp = persona.seleccionNombre(numero);
+            Console.WriteLine("Nombre del Empleado: " + nomEmp);
+        }
+
+        public void AgregarComprobantePago(int numero)
         {
-            //if(_Paquete.Count == 10)
-               //return;
+
+            string comptipPago = tipo.seleccionTipoComprobante(numero);
+            Console.WriteLine("Tipo de Comprobante de Pago: " + comptipPago);
+        }
+
+        public void AgregarMedioPago(int numero)
+        {           
+
+            string medPag = medioPag.seleccionMedioPago(numero);
+            Console.WriteLine("--> Medio de Pago: " + medPag);
+        }
         
-            _Cliente.Add(new Cliente(numero.ToString()));
-            _Empleado.Add(new Empleado(numero.ToString()));
-            string _nomCli = _Persona.seleccionNombre(Convert.ToInt16(numero));
-            string _nomEmp = _Persona.seleccionNombre(Convert.ToUInt16(numero));
-
-            Console.WriteLine("Nombre del Cliente:" ,_nomCli);
-            Console.WriteLine("Nombre del Empleado:", _nomEmp);
-
-        }
-        public void Agregar(string numero)
+              
+        public void AgregarCategoriaAlimentacion(int numero)
         {
-            //if(_Paquete.Count == 10)
-            //return;
-
-            _ComprobantePago.Add(new ComprobantePago(numero));
-            _MedioPago.Add(new MedioPago(numero));
-            _ServicioTuristico.Add(new ServicioTuristico(numero));
-            //_Paquete.Add(new Paquete(numero));
-           
-
+            
+            string catAli = catAlimento.seleccionCategoriaAlimentacion(numero);
+            Console.WriteLine("Categoria de Alimentación: " + catAli);
+              
         }
-        public void Eliminar(string numero)
+
+        public void AgregarTipoHospedaje(int numero)
         {
-            _ComprobantePago.Remove(new ComprobantePago(numero));
-            _MedioPago.Remove(new MedioPago(numero));
-            _ServicioTuristico.Remove(new ServicioTuristico(numero));
-            //_Paquete.Remove(new Paquete(numero));
-            _Cliente.Remove(new Cliente(numero));
-            _Empleado.Remove(new Empleado(numero));
-        }
-        public void RegistrarVenta(string numero)
-        {
-            Empleado _nomEmp = new Empleado(numero);
-            Cliente _nomCli = new Cliente(numero);
-            ComprobantePago _comPag = new ComprobantePago(numero);
-            MedioPago _medPag = new MedioPago(numero);
-            ServicioTuristico _serTur = new ServicioTuristico(numero);
-            //Llamada _llamada = new Llamada(_fonoDestino);
+
+            string tipoHops = tipHos.seleccionTipoHospedaje(numero);
+            Console.WriteLine("Tipo de Hospedaje: " + tipoHops);
 
         }
+
+        public void AgregarClasificacionHospedaje(int numero)
+        {
+
+            string clasHospedaje = claHos.seleccionClasificacionHospedaje(numero);
+            Console.WriteLine("Clasificación del Hospedaje: " + clasHospedaje);
+
+        }
+
+        public void AgregarCategoriaHospedaje(int numero)
+        {
+
+            string categoriaHosp = catHospe.seleccionCategoriaHospedaje(numero);
+            Console.WriteLine("Categoria del Hospedaje: " + categoriaHosp);
+
+        }
+
+        public void AgregarServicioHospedaje(int numero)
+        {
+
+            string servicioHosp = SerHospe.seleccionServicioHospedaje(numero);
+            Console.WriteLine("Servicio del Hospedaje: " + servicioHosp);
+
+        }
+
+        public void AgregarTipoTransporte(int numero)
+        {
+
+            string tipoTrans = tipTrans.seleccionTipoTransporte(numero);
+            Console.WriteLine("Tipo de Transporte: " + tipoTrans);
+
+        }
+
+        public void AgregarCategoriaTransporte(int numero)
+        {
+
+            string categoriaTrans = catTrans.seleccionCategoriaTransporte(numero);
+            Console.WriteLine("Servicio del Hospedaje: " + categoriaTrans);
+
+        }
+       
+
+        // public void RegistrarVenta(string numero)
+        // {
+        // ComprobantePago _comPag = new ComprobantePago(numero);
+        // MedioPago _medPag = new MedioPago(numero);
+        //ServicioTuristico _serTur = new ServicioTuristico(numero);
+        //Console.WriteLine("Tipo de Pago: ", _comPag);
+        // Console.WriteLine("Medio de Pago: ", _medPag);
+        // Console.WriteLine("Tipo de Hospedaje: ", _medPag);
+        // Console.WriteLine("Clasificación de Hospedaje: ", _medPag);
+        // Console.WriteLine("Categoria de Hospedaje: ", _medPag);
+        //Console.WriteLine("Servicio de Hospedaje: ", _medPag);
+
+        //Llamada _llamada = new Llamada(_fonoDestino);
+
+        //}
+
 
     }
 }

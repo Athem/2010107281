@@ -8,9 +8,6 @@ namespace _2010107281
 {
     class Hospedaje : ServicioTuristico
     {
-        private string _nomSerTur;
-        private string _ruc;
-
         public Hospedaje(string numero) : base(numero)
         {
         }
@@ -19,6 +16,8 @@ namespace _2010107281
         private ClasificacionHospedaje _clasificacionHospedaje;
         private CategoriaHospedaje _categoriaHospedaje;
         private ServicioHospedaje _servicioHospedaje;
+
+
                
         public TipoHospedaje tipHos { get { return _tipoHospedaje; } }
         public ClasificacionHospedaje claHos { get { return _clasificacionHospedaje; } }
