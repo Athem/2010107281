@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace _2010107281
 {
-    class CategoriaHospedaje
+    public class CategoriaHospedaje
     {
+        public string seleccionCategoriaHospedaje(int ale)
+        {
+            if (ale == 1)
+            {
+                return "Basico";
+            }
+            else if (ale == 2)
+            {
+                return "VIP";
+            }
+            else
+            {
+                return "Normal";
+            }
+        }
     }
 }

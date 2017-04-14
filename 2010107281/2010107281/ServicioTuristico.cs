@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace _2010107281
 {
-    class ServicioTuristico
+    public class ServicioTuristico //cambiar a abstract
     {
+        string _numero;
+
+        public ServicioTuristico(string numero)
+        {
+            _numero = numero;
+        }
+       
     }
 }

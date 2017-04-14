@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace _2010107281
 {
-    class Cliente
+    class Cliente : Persona
     {
+        string _numero;
+
+        public Cliente(string numero)
+        {
+            _numero = numero;
+        }
+
+        public string Numero { get { return _numero; } }
+
+
     }
 }

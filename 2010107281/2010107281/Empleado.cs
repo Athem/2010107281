@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace _2010107281
 {
-    class Empleado
+    public class Empleado : Persona
     {
+
+        string _numero;
+
+        public Empleado(string numero)
+        {
+            _numero = numero;
+        }
+        public string Numero { get { return _numero; } }
     }
 }
